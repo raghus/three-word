@@ -6,9 +6,17 @@
 </head>
 <body>
 	<h1>Guess the Word</h1>
+  <h2>The Rules:</h2>
+  <li> Goal: you have to correctly guess a secretly chosen simple 3 letter English word (like CAT or DOG)</li>
+  <li> For each letter of your word that is in the secret word you get 5 points (a guess of OWN for the secret word of DOG gets you 5 points) </li>   
+  <li> For each letter of your word that is in the secret word in the correct position you get 10 points instead (a guess of DIG for the secret word of DOG gets you 20 points)</li>
+  <li> You win when your score is 30 i.e. all letters are correct and in the right postion which means you solved it!</li>
+  <li> You get unlimited guesses</li>
+
 	<p>Your score: {{ .score }}</p>
 	{{ if .message }}
-		<p>{{ .message }}</p>
+    <hr>
+		<h3>{{ .message }}</h3>
 	{{ end }}
 	<form method="POST">
 		<input type="text" name="guess" required>
