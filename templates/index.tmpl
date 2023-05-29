@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the Word</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+	<h1>Guess the Word</h1>
+	<p>Your score: {{ .score }}</p>
+	{{ if .message }}
+		<p>{{ .message }}</p>
+	{{ end }}
+	<form method="POST">
+		<input type="text" name="guess" required>
+		<input type="submit" value="Guess">
+	</form>
+</body>
+</html>
